@@ -1,0 +1,44 @@
+[pull]
+  rebase = false
+[diff]
+  ; external = difft
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
+[user]
+  name = Brian McMillen
+  email = brian.mcmillen@journeygroup.com
+[init]
+  defaultBranch = main
+[merge]
+  tool = kdiff3
+[core]
+	excludesfile = ~/.gitignore
+[column]
+  ui = auto
+[branch]
+  sort = -committerdate
+[tag]
+  sort = version:refname
+[push]
+  default = simple
+  autoSetupRemote = true
+  followTags = true
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
+[help]
+  autocorrect = prompt
+[commit]
+  verbose = true
+[rerere]
+  enabled = true
+  autoupdate = true
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+[credential]
+	helper = "!f() { /var/www/.vscode-server/bin/03c265b1adee71ac88f833e065f7bb956b60550a/node /tmp/vscode-remote-containers-ae6386c3-3daf-4eda-b2b1-51f8e5f7e7de.js git-credential-helper $*; }; f"

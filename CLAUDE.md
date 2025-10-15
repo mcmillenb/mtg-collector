@@ -37,7 +37,31 @@ This is a Magic: The Gathering card collection application built with Laravel 12
 
 ## Development Commands
 
-### Setup and Installation
+### Docker Development (Recommended)
+```bash
+# Build and start all services
+docker-compose up -d --build
+
+# View logs
+docker-compose logs -f
+
+# Access app container shell
+docker-compose exec app bash
+
+# Stop all services
+docker-compose down
+
+# Rebuild containers
+docker-compose down && docker-compose up -d --build
+```
+
+The Docker setup includes:
+- **app**: Main Laravel application (port 8000)
+- **vite**: Frontend dev server with HMR (port 5173)  
+- **redis**: Cache and session store
+- **queue**: Background job processing
+
+### Local Development (Alternative)
 ```bash
 composer install
 npm install
