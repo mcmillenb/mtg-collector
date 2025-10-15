@@ -43,7 +43,9 @@ services:
       - "5173:5173"
     networks:
       - magic-collector
-    command: npm run dev -- --host=0.0.0.0
+    depends_on:
+      - app
+    command: npm run dev
 
   redis:
     image: redis:7-alpine

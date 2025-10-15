@@ -8,7 +8,8 @@
       "Bash(php artisan vendor:publish:*)",
       "Bash(npm run build:*)",
       "Bash(docker-compose up:*)",
-      "Bash(docker-compose:*)"
+      "Bash(docker-compose:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []

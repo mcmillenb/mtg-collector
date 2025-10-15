@@ -10,7 +10,7 @@ class CardController extends Controller
     public function search(Request $request)
     {
         $query = $request->input('q');
-        
+
         if (empty($query)) {
             return response()->json(['error' => 'Query parameter is required'], 400);
         }
@@ -18,7 +18,7 @@ class CardController extends Controller
         try {
             $response = Http::get('https://api.scryfall.com/cards/search', [
                 'q' => $query,
-                'order' => 'name'
+                'order' => 'name',
             ]);
 
             if ($response->successful()) {

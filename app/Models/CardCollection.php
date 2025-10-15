@@ -13,7 +13,7 @@ class CardCollection extends Model
         'type_line',
         'set_name',
         'mana_cost',
-        'quantity'
+        'quantity',
     ];
 
     protected $casts = [

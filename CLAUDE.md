@@ -90,6 +90,13 @@ composer test                 # Run PHPUnit tests
 php artisan test              # Laravel test runner
 ```
 
+### Code Quality
+```bash
+composer lint                 # Format code with Laravel Pint
+composer lint:check          # Check code style without fixing
+composer lint:fix            # Format code (same as lint)
+```
+
 ### Database Management
 ```bash
 php artisan migrate           # Run pending migrations

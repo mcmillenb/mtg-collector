@@ -11,14 +11,26 @@
         "Vue.volar",
         "bradlc.vscode-tailwindcss",
         "bmewburn.vscode-intelephense-client",
-        "ms-vscode.vscode-json"
+        "ms-vscode.vscode-json",
+        "open-southeners.laravel-pint"
       ],
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash"
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "php.format.enable": false,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": null,
+        "[php]": {
+          "editor.defaultFormatter": "open-southeners.laravel-pint",
+          "editor.formatOnSave": true
+        },
+        "laravel-pint.enable": true,
+        "laravel-pint.runOnSave": true,
+        "laravel-pint.configPath": "./pint.json"
       }
     }
   },
   "forwardPorts": [8000, 5173],
   "postCreateCommand": "composer install && npm install",
-  "remoteUser": "www-data"
+  "remoteUser": "root",
+  "containerUser": "root"
 }

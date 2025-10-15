@@ -41,8 +41,8 @@ RUN chown -R www-data:www-data /var/www \
     && chmod -R 755 /var/www/storage \
     && chmod -R 755 /var/www/bootstrap/cache
 
-# Switch to www-data user
-USER www-data
+# For development, stay as root to avoid permission issues with VS Code
+# USER www-data
 
 # Expose port 8000 for Laravel and 5173 for Vite
 EXPOSE 8000 5173
