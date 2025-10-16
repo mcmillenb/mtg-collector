@@ -21,6 +21,8 @@
   "laravel-pint.enable": true,
   "laravel-pint.runOnSave": true,
   "laravel-pint.configPath": "./pint.json",
+  "phpsab.enable": false,
+  "php.validate.enable": false,
   "files.associations": {
     "*.blade.php": "blade"
   },

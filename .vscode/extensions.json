@@ -1,11 +1,42 @@
 {
   "recommendations": [
-    "open-southeners.laravel-pint",
+    // PHP/Laravel - The foundation for backend rad-ness
     "bmewburn.vscode-intelephense-client",
+    "open-southeners.laravel-pint",
+    "onecentlin.laravel-blade",
+    "amiralizadeh9480.laravel-extra-intellisense",
+    "ryannaddy.laravel-artisan",
+    "shufo.vscode-blade-formatter",
+    
+    // Vue.js - Frontend excellence
     "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin",
+    "hollowtree.vue-snippets",
+    
+    // Code Quality & Formatting - Keep it clean!
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
     "bradlc.vscode-tailwindcss",
-    "ms-vscode.vscode-typescript-next",
+    
+    // Development Tools - For maximum shredding
+    "xdebug.php-debug",
+    "humao.rest-client",
     "ms-vscode.vscode-json",
-    "esbenp.prettier-vscode"
+    "ms-vscode.vscode-typescript-next",
+    
+    // Git & Productivity - Flow like water
+    "eamodio.gitlens",
+    "alefragnani.project-manager",
+    "antfu.iconify",
+    "yoavbls.pretty-ts-errors",
+    
+    // Documentation and Comments
+    "aaron-bond.better-comments",
+    "streetsidesoftware.code-spell-checker"
+  ],
+  "unwantedRecommendations": [
+    "felixfbecker.php-intellisense",
+    "octref.vetur",
+    "ms-vscode.vscode-php-debug"
   ]
 }
