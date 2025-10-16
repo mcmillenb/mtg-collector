@@ -17,29 +17,56 @@
   "php.format.enable": false,
   "php.suggest.basic": false,
   "php.validate.enable": false,
-  
+
   "[php]": {
     "editor.defaultFormatter": "open-southeners.laravel-pint",
     "editor.formatOnSave": true,
     "editor.tabSize": 4
   },
-  
+
   // Intelephense - The secret sauce for PHP IntelliSense
   "intelephense.environment.phpVersion": "8.2.0",
   "intelephense.environment.includePaths": ["vendor"],
   "intelephense.stubs": [
-    "apache", "redis", "bcmath", "bz2", "calendar", "Core", "ctype", 
-    "curl", "date", "dom", "fileinfo", "filter", "ftp", "gd", "hash", 
-    "iconv", "json", "mbstring", "mysqli", "openssl", "pcre", "PDO", 
-    "pdo_mysql", "Phar", "Reflection", "session", "SimpleXML", "SPL", 
-    "standard", "tokenizer", "xml", "zip"
+    "apache",
+    "redis",
+    "bcmath",
+    "bz2",
+    "calendar",
+    "Core",
+    "ctype",
+    "curl",
+    "date",
+    "dom",
+    "fileinfo",
+    "filter",
+    "ftp",
+    "gd",
+    "hash",
+    "iconv",
+    "json",
+    "mbstring",
+    "mysqli",
+    "openssl",
+    "pcre",
+    "PDO",
+    "pdo_mysql",
+    "Phar",
+    "Reflection",
+    "session",
+    "SimpleXML",
+    "SPL",
+    "standard",
+    "tokenizer",
+    "xml",
+    "zip"
   ],
   "intelephense.format.enable": false,
   "intelephense.completion.triggerParameterHints": true,
   "intelephense.completion.insertUseDeclaration": true,
   "intelephense.telemetry.enabled": false,
   "intelephense.maxMemory": 2048,
-  
+
   // Laravel Pint Integration
   "laravel-pint.enable": true,
   "laravel-pint.runOnSave": true,
@@ -88,12 +115,7 @@
     "blade": "html",
     "vue": "html"
   },
-  "tailwindCSS.classAttributes": [
-    "class",
-    "className",
-    "classList",
-    "ngClass"
-  ],
+  "tailwindCSS.classAttributes": ["class", "className", "classList", "ngClass"],
 
   // ==================== FILE MANAGEMENT ====================
   "files.exclude": {
@@ -143,10 +165,10 @@
   "workbench.startupEditor": "none",
   "breadcrumbs.enabled": true,
   "problems.decorations.enabled": true,
-  
+
   // Auto-save for better dev flow
   "files.autoSave": "onFocusChange",
-  
+
   // Terminal integration
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontSize": 14
