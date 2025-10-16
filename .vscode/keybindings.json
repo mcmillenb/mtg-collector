@@ -1,0 +1,7 @@
+[
+  {
+    "key": "ctrl+f",
+    "command": "editor.action.format",
+    "when": "editorTextFocus"
+  }
+]

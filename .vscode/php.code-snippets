@@ -1,0 +1,115 @@
+{
+  "Laravel Controller": {
+    "prefix": "lcontroller",
+    "body": [
+      "<?php",
+      "",
+      "namespace App\\Http\\Controllers;",
+      "",
+      "use Illuminate\\Http\\Request;",
+      "use Inertia\\Inertia;",
+      "",
+      "class ${1:ControllerName} extends Controller",
+      "{",
+      "    public function index()",
+      "    {",
+      "        return Inertia::render('${2:PageComponent}', [",
+      "            $0",
+      "        ]);",
+      "    }",
+      "}"
+    ],
+    "description": "Create a Laravel controller with Inertia"
+  },
+  "Laravel Model": {
+    "prefix": "lmodel",
+    "body": [
+      "<?php",
+      "",
+      "namespace App\\Models;",
+      "",
+      "use Illuminate\\Database\\Eloquent\\Factories\\HasFactory;",
+      "use Illuminate\\Database\\Eloquent\\Model;",
+      "",
+      "class ${1:ModelName} extends Model",
+      "{",
+      "    use HasFactory;",
+      "",
+      "    protected \\$fillable = [",
+      "        ${2:'name',}",
+      "        $0",
+      "    ];",
+      "",
+      "    protected \\$casts = [",
+      "        'created_at' => 'datetime',",
+      "        'updated_at' => 'datetime',",
+      "    ];",
+      "}"
+    ],
+    "description": "Create a Laravel Eloquent model"
+  },
+  "Laravel Migration": {
+    "prefix": "lmigration",
+    "body": [
+      "<?php",
+      "",
+      "use Illuminate\\Database\\Migrations\\Migration;",
+      "use Illuminate\\Database\\Schema\\Blueprint;",
+      "use Illuminate\\Support\\Facades\\Schema;",
+      "",
+      "return new class extends Migration",
+      "{",
+      "    public function up(): void",
+      "    {",
+      "        Schema::create('${1:table_name}', function (Blueprint \\$table) {",
+      "            \\$table->id();",
+      "            \\$table->string('${2:name}');",
+      "            $0",
+      "            \\$table->timestamps();",
+      "        });",
+      "    }",
+      "",
+      "    public function down(): void",
+      "    {",
+      "        Schema::dropIfExists('${1:table_name}');",
+      "    }",
+      "};"
+    ],
+    "description": "Create a Laravel migration"
+  },
+  "Laravel Test": {
+    "prefix": "ltest",
+    "body": [
+      "<?php",
+      "",
+      "namespace Tests\\Feature;",
+      "",
+      "use Tests\\TestCase;",
+      "use Illuminate\\Foundation\\Testing\\RefreshDatabase;",
+      "",
+      "class ${1:TestName} extends TestCase",
+      "{",
+      "    use RefreshDatabase;",
+      "",
+      "    public function test_${2:test_description}(): void",
+      "    {",
+      "        $0",
+      "        ",
+      "        \\$this->assertTrue(true);",
+      "    }",
+      "}"
+    ],
+    "description": "Create a Laravel test"
+  },
+  "Inertia Route": {
+    "prefix": "iroute",
+    "body": [
+      "Route::get('/${1:path}', function () {",
+      "    return Inertia::render('${2:Component}', [",
+      "        $0",
+      "    ]);",
+      "});"
+    ],
+    "description": "Create an Inertia route"
+  }
+}

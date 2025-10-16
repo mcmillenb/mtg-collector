@@ -1,0 +1,153 @@
+{
+  // ==================== CORE EDITOR SETTINGS ====================
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.rulers": [80, 120],
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.inlineSuggest.enabled": true,
+
+  // ==================== PHP/LARAVEL CONFIGURATION ====================
+  "php.format.enable": false,
+  "php.suggest.basic": false,
+  "php.validate.enable": false,
+  
+  "[php]": {
+    "editor.defaultFormatter": "open-southeners.laravel-pint",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  
+  // Intelephense - The secret sauce for PHP IntelliSense
+  "intelephense.environment.phpVersion": "8.2.0",
+  "intelephense.environment.includePaths": ["vendor"],
+  "intelephense.stubs": [
+    "apache", "redis", "bcmath", "bz2", "calendar", "Core", "ctype", 
+    "curl", "date", "dom", "fileinfo", "filter", "ftp", "gd", "hash", 
+    "iconv", "json", "mbstring", "mysqli", "openssl", "pcre", "PDO", 
+    "pdo_mysql", "Phar", "Reflection", "session", "SimpleXML", "SPL", 
+    "standard", "tokenizer", "xml", "zip"
+  ],
+  "intelephense.format.enable": false,
+  "intelephense.completion.triggerParameterHints": true,
+  "intelephense.completion.insertUseDeclaration": true,
+  "intelephense.telemetry.enabled": false,
+  "intelephense.maxMemory": 2048,
+  
+  // Laravel Pint Integration
+  "laravel-pint.enable": true,
+  "laravel-pint.runOnSave": true,
+  "laravel-pint.configPath": "./pint.json",
+
+  // ==================== VUE/FRONTEND CONFIGURATION ====================
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+
+  // ==================== BLADE TEMPLATES ====================
+  "files.associations": {
+    "*.blade.php": "blade"
+  },
+  "emmet.includeLanguages": {
+    "blade": "html"
+  },
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter",
+    "editor.tabSize": 4
+  },
+
+  // ==================== TAILWIND CSS ====================
+  "tailwindCSS.includeLanguages": {
+    "blade": "html",
+    "vue": "html"
+  },
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "classList",
+    "ngClass"
+  ],
+
+  // ==================== FILE MANAGEMENT ====================
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/vendor": true,
+    "**/.git": true,
+    "**/storage/framework": true,
+    "**/storage/logs": true,
+    "**/public/build": true,
+    "**/bootstrap/cache": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/vendor": true,
+    "**/storage": true,
+    "**/public/build": true,
+    "**/bootstrap/cache": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/vendor/**": true,
+    "**/storage/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/public/build/**": true
+  },
+
+  // ==================== GIT INTEGRATION ====================
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.postCommitCommand": "none",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+
+  // ==================== PERFORMANCE OPTIMIZATIONS ====================
+  "php.memoryLimit": "2G",
+  "search.followSymlinks": false,
+  "search.smartCase": true,
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+
+  // ==================== DEVELOPMENT EXPERIENCE ====================
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.startupEditor": "none",
+  "breadcrumbs.enabled": true,
+  "problems.decorations.enabled": true,
+  
+  // Auto-save for better dev flow
+  "files.autoSave": "onFocusChange",
+  
+  // Terminal integration
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontSize": 14
+}
