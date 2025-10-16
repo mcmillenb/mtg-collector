@@ -1,13 +1,9 @@
 {
   "name": "Magic Collector",
-  "image": "mcr.microsoft.com/devcontainers/php:8.3",
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "20"
-    },
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-    "ghcr.io/devcontainers/features/composer:2": {}
-  },
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/var/www",
+  "shutdownAction": "stopCompose",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -34,6 +30,7 @@
     }
   },
   "forwardPorts": [8000, 5173],
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y sqlite3 libsqlite3-dev && composer install && npm install && touch database/database.sqlite && php artisan key:generate && php artisan migrate",
-  "remoteUser": "vscode"
+  "postCreateCommand": "composer install && npm install",
+  "remoteUser": "root",
+  "containerUser": "root"
 }
