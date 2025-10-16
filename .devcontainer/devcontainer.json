@@ -1,0 +1,37 @@
+{
+  "name": "Magic Collector",
+  "image": "mcr.microsoft.com/devcontainers/php:8.3",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.vscode-typescript-next",
+        "Vue.volar",
+        "bradlc.vscode-tailwindcss",
+        "bmewburn.vscode-intelephense-client",
+        "ms-vscode.vscode-json",
+        "open-southeners.laravel-pint"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "php.format.enable": false,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": null,
+        "[php]": {
+          "editor.defaultFormatter": "open-southeners.laravel-pint",
+          "editor.formatOnSave": true
+        },
+        "laravel-pint.enable": true,
+        "laravel-pint.runOnSave": true,
+        "laravel-pint.configPath": "./pint.json"
+      }
+    }
+  },
+  "forwardPorts": [8000, 5173],
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y sqlite3 libsqlite3-dev curl && curl -sS https://getcomposer.org/installer | php && sudo mv composer.phar /usr/local/bin/composer && composer install && npm install && touch database/database.sqlite && php artisan key:generate && php artisan migrate",
+  "remoteUser": "vscode"
+}
